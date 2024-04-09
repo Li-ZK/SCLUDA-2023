@@ -18,7 +18,7 @@ cleanlab = 1.0
 
 ## dataset
 
-You can download the hyperspectral datasets in mat format at: https://pan.baidu.com/s/14pqanFPK3JQhDIxrjzSn3g?pwd=l3wf, and move the files to `./datasets` folder.
+You can download the hyperspectral datasets in mat format at:https://pan.baidu.com/s/184BXDD2KnlreqXX70Nar4Q?pwd=kfgj, and move the files to `./datasets` folder.
 
 An example dataset folder has the following structure:
 
