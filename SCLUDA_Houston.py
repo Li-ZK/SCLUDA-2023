@@ -185,11 +185,11 @@ for iDataSet in range(nDataSet):
             len_clean_loader = len(iter_clean)
         num_iter = len_source_loader
 
-        for i in range(1,num_iter):
+        for i in range(num_iter):
             source_data, source_label = iter_source.next()
             target_data, target_label = iter_target.next()
 
-            if i % len_target_loader == 0:
+            if (i+1) % len_target_loader == 0 and (i+1) != num_iter:
                 iter_target = iter(train_loader_t)
 
             # 0
@@ -245,7 +245,7 @@ for iDataSet in range(nDataSet):
             test_accuracy = 100. * float(total_hit) / size
 
             if epoch >= train_num:
-                if i % len_clean_loader == 0:
+                if (i+1) % len_clean_loader == 0:
                     iter_clean = iter(clean_loader)
                 clean_data, clean_label = iter_clean.next()
                 clean_features, _, _, clean_outputs, _ = feature_encoder(clean_data.cuda())
