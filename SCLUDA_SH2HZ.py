@@ -244,7 +244,7 @@ for iDataSet in range(nDataSet):
 
             if epoch >= train_num:
                 if i % len_clean_loader == 0:
-                    iter_target = iter(clean_loader)
+                    iter_clean = iter(clean_loader)
                 clean_data, clean_label = iter_clean.next()
                 clean_features, _, _, clean_outputs, _ = feature_encoder(clean_data.cuda())
                 target_cls_loss = 0.01 * crossEntropy(clean_outputs, clean_label.cuda())#0.03
